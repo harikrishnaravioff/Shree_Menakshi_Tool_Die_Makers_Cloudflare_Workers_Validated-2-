@@ -1,0 +1,10 @@
+(function(){const b=document.querySelector('.menu-toggle'),m=document.querySelector('.mobile-menu');if(b&&m){b.addEventListener('click',function(){const o=m.classList.toggle('open');b.setAttribute('aria-expanded',String(o));b.setAttribute('aria-label',o?'Close navigation menu':'Open navigation menu');b.textContent=o?'×':'☰'});m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('open');b.setAttribute('aria-expanded','false');b.setAttribute('aria-label','Open navigation menu');b.textContent='☰'})})}document.querySelectorAll('[data-year]').forEach(function(e){e.textContent=new Date().getFullYear()});const io='IntersectionObserver'in window?new IntersectionObserver(function(es,o){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('is-visible');o.unobserve(e.target)}})},{rootMargin:'0px 0px -50px'}):null;document.querySelectorAll('.reveal').forEach(function(e){if(io)io.observe(e);else e.classList.add('is-visible')});const f=document.querySelector('[data-quote-form]'),s=document.querySelector('[data-form-status]');if(f&&s)f.addEventListener('submit',function(e){e.preventDefault();if(!f.checkValidity()){f.reportValidity();return}s.textContent='Your enquiry details are ready. Connect this form to the company email or Cloudflare-compatible form endpoint when the contact details are confirmed.';f.reset()});document.querySelectorAll('[data-placeholder-action]').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();const t=document.querySelector('#contact-details');if(t)t.scrollIntoView({behavior:'smooth',block:'start'})})})})();
+
+(function(){
+  var hero=document.querySelector('.hero-motion');
+  if(!hero) return;
+  hero.addEventListener('mouseenter',function(){hero.classList.add('is-hovered')});
+  hero.addEventListener('mouseleave',function(){hero.classList.remove('is-hovered')});
+  hero.addEventListener('focusin',function(){hero.classList.add('is-focused')});
+  hero.addEventListener('focusout',function(){hero.classList.remove('is-focused')});
+})();

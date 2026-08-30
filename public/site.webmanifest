@@ -1,0 +1,15 @@
+{
+  "name": "Shree Menakshi Tool & Die Makers",
+  "short_name": "Shree Menakshi Tool Makers",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#061725",
+  "theme_color": "#0a2138",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
